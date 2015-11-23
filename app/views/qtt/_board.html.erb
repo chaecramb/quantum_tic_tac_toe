@@ -1,0 +1,144 @@
+<table>
+  <tr>
+    <td>
+      <div class="board">
+        <% @board[0].each do |symbol| %>
+        <% if symbol.length == 1 %>
+          <div class="collapsed-marks">
+            <%= symbol %>
+          </div>
+        <% else %>
+          <div class="quantum-marks">
+            <%= symbol[0] %><sub><%= symbol[1] %></sub>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[1].each do |symbol| %>
+        <% if symbol.length == 1 %>
+          <div class="collapsed-marks">
+            <%= symbol %>
+          </div>
+        <% else %>
+          <div class="quantum-marks">
+            <%= symbol[0] %><sub><%= symbol[1] %></sub>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[2].each do |symbol| %>
+        <% if symbol.length == 1 %>
+          <div class="collapsed-marks">
+            <%= symbol %>
+          </div>
+        <% else %>
+          <div class="quantum-marks">
+            <%= symbol[0] %><sub><%= symbol[1] %></sub>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="board">
+        <% @board[3].each do |symbol| %>
+         <% if symbol.length == 1 %>
+           <div class="collapsed-marks">
+             <%= symbol %>
+           </div>
+         <% else %>
+           <div class="quantum-marks">
+             <%= symbol[0] %><sub><%= symbol[1] %></sub>
+           </div>
+         <% end %>
+       <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[4].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[5].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="board">
+        <% @board[6].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[7].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[8].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+    </td>
+  </tr>
+</table>

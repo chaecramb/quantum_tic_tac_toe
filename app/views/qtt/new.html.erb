@@ -1,0 +1,21 @@
+<div class="col-md-4 col-md-offset-4">
+  <div class="new-game-form">
+       <%= form_for(@qtt, :url=> "/qtt", html: {class: 'form'}) do |f| %>
+   <!--       <div class="form-group">
+         <%#= f.label :player2_id, "Play against a guest" %><br>
+         <%#= f.radio_button :player2_id, 1 %>
+         </div> -->
+         <div class="form-group">
+           <%= f.label :player1, "PLAYER 1" %><br>
+           <%= f.text_field :player1, class: 'form-control', placeholder: "enter name" %>
+         </div>
+         <div class="form-group">
+           <%= f.label :player2, "PLAYER 2" %><br>
+           <%= f.text_field :player2, class: 'form-control', placeholder: "enter name" %>
+         </div>
+         <div class="new-game-submit">
+           <%= f.submit "PLAY", class: 'btn btn-default btn-lg' %>
+         </div>
+       <% end %>
+       </div>
+</div>

@@ -1,0 +1,10 @@
+<%= form_tag({controller: 'qtt', action: 'update'}, method: :put, class: 'form') do %>
+  <h3>CYCLICAL ENTAGLEMENT!</h3>
+  <p><%= @qtt.whose_turn %> select a particle to observe</p>
+<!--   <div class="form-group">
+    <%#= select_tag :collapse, options_for_select(@qtt.select_move_to_collapse.map {|m| [m.square, m.id]}), class: 'form-control collapse-select' %>
+  </div>
+  <div class="new-game-submit">
+    <%#= submit_tag "Measure", class: 'btn btn-default btn-lg' %>
+  </div> -->
+<% end %>

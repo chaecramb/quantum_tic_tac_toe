@@ -1,0 +1,43 @@
+<section class='row'>
+  <div class="col-md-5">
+    <h1><%= "#{@player1}" %></h1>
+    <h4 class="symbol">Symbol: X</h4>
+  </div>
+
+  <div class="col-md-2">
+    <h1>vs.</h1>
+  </div>
+  
+  <div class="col-md-5">
+    <h1><%= "#{@player2}" %></h1>
+    <h4 class="symbol">Symbol: O</h4>
+  </div>
+</section>
+<section class='row'>
+  <div class="col-md-3 siderbar">
+    <% if @player1 != @current_player %>
+      <%= render 'qtt/finished', qtt: @qtt if @qtt.dual_win? || @qtt.winning_game? || @qtt.drawn_game? %>
+    <% end %>
+    <% if @player1 == @current_player %>  
+      <%= (render 'qtt/in_progress', qtt: @qtt, player1: @player1, player2: @player2, board: @board, current_player: @current_player) unless @qtt.dual_win? || @qtt.winning_game? || @qtt.drawn_game? %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <% if @qtt.qtt_moves.any? && @qtt.collapse? %>
+      <% @moves_in_cycle = @qtt.moves_in_cycle %>
+      <%= render 'qtt/collapsing_board', board: @board, moves_in_cycle: @moves_in_cycle %>
+    <% else %>
+      <%= render 'qtt/board', board: @board %>
+    <% end %>
+  </div>
+
+  <div class="col-md-3 siderbar">
+  <% if @player2 != @current_player %>
+    <%= render 'qtt/finished', qtt: @qtt if @qtt.dual_win? || @qtt.winning_game? || @qtt.drawn_game? %>
+  <% end %>
+  <% if @player2 == @current_player %>  
+    <%= (render 'qtt/in_progress', qtt: @qtt, player1: @player1, player2: @player2, board: @board, current_player: @current_player) unless @qtt.dual_win? || @qtt.winning_game? || @qtt.drawn_game? %>
+  <% end %>
+  </div>
+</section

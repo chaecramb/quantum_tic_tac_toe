@@ -1,0 +1,204 @@
+<!-- link_to - put request - id of move clicked
+@qtt.qtt_moves.where("square = 0 AND symbol = ?" symbol).pluck(:id).first -->
+
+<table>
+  <tr>
+    <td>
+      <div class="board">
+        <% @board[0].each do |symbol| %>
+        <% if symbol.length == 1 %>
+          <div class="collapsed-marks">
+            <%= symbol %>
+          </div>
+        <% elsif @moves_in_cycle[0] && (@moves_in_cycle[0].include? symbol) && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol) %>
+        <% move_id = @qtt.qtt_moves.where("square = 0 AND symbol = ?", symbol).pluck(:id).first %>
+        <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse" do %>
+            <div class="quantum-marks pulse">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="quantum-marks">
+            <%= symbol[0] %><sub><%= symbol[1] %></sub>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[1].each do |symbol| %>
+        <% if symbol.length == 1 %>
+          <div class="collapsed-marks">
+            <%= symbol %>
+          </div>
+          <% elsif @moves_in_cycle[1] && (@moves_in_cycle[1].include? symbol)  && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol)%>
+          <% move_id = @qtt.qtt_moves.where("square = 1 AND symbol = ?", symbol).pluck(:id).first %>
+          <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse", :class => "pulse" do %>
+              <div class="quantum-marks pulse">
+                <%= symbol[0] %><sub><%= symbol[1] %></sub>
+              </div>
+            <% end %>
+        <% else %>
+          <div class="quantum-marks">
+            <%= symbol[0] %><sub><%= symbol[1] %></sub>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[2].each do |symbol| %>
+        <% if symbol.length == 1 %>
+          <div class="collapsed-marks">
+            <%= symbol %>
+          </div>
+      <% elsif @moves_in_cycle[2] && (@moves_in_cycle[2].include? symbol)  && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol)%>
+        <% move_id = @qtt.qtt_moves.where("square = 2 AND symbol = ?", symbol).pluck(:id).first %>
+        <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse" do %>
+          <div class="quantum-marks pulse">
+            <%= symbol[0] %><sub><%= symbol[1] %></sub>
+          </div>
+        <% end %>
+        <% else %>
+          <div class="quantum-marks">
+            <%= symbol[0] %><sub><%= symbol[1] %></sub>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="board">
+        <% @board[3].each do |symbol| %>
+         <% if symbol.length == 1 %>
+           <div class="collapsed-marks">
+             <%= symbol %>
+           </div>
+           <% elsif @moves_in_cycle[3] && (@moves_in_cycle[3].include? symbol) && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol)%>
+           <% move_id = @qtt.qtt_moves.where("square = 3 AND symbol = ?", symbol).pluck(:id).first %>
+           <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse" do %>               <div class="quantum-marks pulse">
+                 <%= symbol[0] %><sub><%= symbol[1] %></sub>
+               </div>
+             <% end %>
+         <% else %>
+           <div class="quantum-marks">
+             <%= symbol[0] %><sub><%= symbol[1] %></sub>
+           </div>
+         <% end %>
+       <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[4].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+            <% elsif @moves_in_cycle[4] && (@moves_in_cycle[4].include? symbol) && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol) %>
+            <% move_id = @qtt.qtt_moves.where("square = 4 AND symbol = ?", symbol).pluck(:id).first %>
+            <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse" do %>                <div class="quantum-marks pulse">
+                  <%= symbol[0] %><sub><%= symbol[1] %></sub>
+                </div>
+              <% end %>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[5].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+            <% elsif @moves_in_cycle[5] && (@moves_in_cycle[5].include? symbol) && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol) %>
+            <% move_id = @qtt.qtt_moves.where("square = 5 AND symbol = ?", symbol).pluck(:id).first %>
+            <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse" do %>                <div class="quantum-marks pulse">
+                  <%= symbol[0] %><sub><%= symbol[1] %></sub>
+                </div>
+              <% end %>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="board">
+        <% @board[6].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+            <% elsif @moves_in_cycle[6] && (@moves_in_cycle[6].include? symbol) && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol) %>
+            <% move_id = @qtt.qtt_moves.where("square = 6 AND symbol = ?", symbol).pluck(:id).first %>
+            <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse" do %>                <div class="quantum-marks pulse">
+                  <%= symbol[0] %><sub><%= symbol[1] %></sub>
+                </div>
+              <% end %>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[7].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+            <% elsif @moves_in_cycle[7] && (@moves_in_cycle[7].include? symbol) && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol) %>
+            <% move_id = @qtt.qtt_moves.where("square = 7 AND symbol = ?", symbol).pluck(:id).first %>
+            <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse" do %>                <div class="quantum-marks pulse">
+                  <%= symbol[0] %><sub><%= symbol[1] %></sub>
+                </div>
+              <% end %>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </td>
+    <td>
+      <div class="board">
+        <% @board[8].each do |symbol| %>
+          <% if symbol.length == 1 %>
+            <div class="collapsed-marks">
+              <%= symbol %>
+            </div>
+            <% elsif @moves_in_cycle[8] && (@moves_in_cycle[8].include? symbol) && (@moves_in_cycle.flatten(2).select{|m| @moves_in_cycle.flatten(2).count(m) > 1}.uniq.include? symbol) %>
+            <% move_id = @qtt.qtt_moves.where("square = 8 AND symbol = ?", symbol).pluck(:id).first %>
+            <%= link_to qtt_path(@qtt, :collapse => move_id), :method => :put, :name => "collapse", :id => "collapse" do %>                <div class="quantum-marks pulse">
+                  <%= symbol[0] %><sub><%= symbol[1] %></sub>
+                </div>
+              <% end %>
+          <% else %>
+            <div class="quantum-marks">
+              <%= symbol[0] %><sub><%= symbol[1] %></sub>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,575 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+    font-family: 'Chalk Hand Lettering';
+    src:url('fonts/Colored-Crayons.ttf') format('truetype');
+} 
+
+@font-face {
+    font-family: 'Monster Unleashed';
+    src:url('fonts/Monster-Unleashed.ttf') format('truetype');
+} 
+
+@font-face {
+    font-family: 'Eraser Dust';
+    src:url('fonts/EraserDust.ttf') format('truetype');
+} 
+
+@font-face {
+    font-family: 'Coffee House';
+    src:url('fonts/Coffee-House.ttf') format('truetype');
+} 
+
+.players {
+  width: 370px;
+}
+
+.players, .games, .btn {
+  box-shadow: 10px 10px 5px rgba(30, 30, 30, .6);
+
+}
+
+main {
+  padding-top: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.alert {
+  opacity: 0.8;
+}
+
+table {
+  table-layout: fixed;
+  margin-top: 0;
+}
+
+ table, td {
+  border: 10px solid white;
+  border-collapse: collapse;
+ }
+
+ tr {
+  padding: 0px;
+  margin: 0px;
+ }
+
+ td {
+  padding: 0px;
+  margin: 0px;
+  vertical-align: top;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  text-align: center;
+ }
+
+ .board {
+  height: 157px;
+  width: 157px;
+  overflow: hidden;
+ }
+
+ table {
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+/*.board a {
+  position:relative;
+}
+
+ .board a:hover {
+  position:relative;
+  right: 103px;
+  top: 5px;
+ }
+
+ .board .move {
+  position:relative;
+  right: 103px;
+  top: 5px;
+ }*/
+
+ h1 {
+  text-align: center;
+  font-family: 'Chalk Hand Lettering';
+  color: rgba(255, 255, 255, 1);
+  font-size: 5em;
+  margin: 0;
+ }
+
+ h2 {
+  text-align: center;
+  font-family: 'Chalk Hand Lettering';
+  color: rgba(255, 255, 255, 1);
+  font-size: 4em;
+  margin: 5px;
+ }
+
+ h3 {
+  font-family: 'Chalk Hand Lettering';
+  color: rgba(255, 255, 255, 1);
+  font-size: 3em;
+  margin: 10px;
+ }
+
+ h4 {
+  font-family: 'Chalk Hand Lettering';
+  color: rgba(255, 255, 255, 1);
+  font-size: 2em;
+ }
+
+ body {
+/*  background-image: url("wildtextures-weathered-table-top3.jpg");
+  background-size: cover;*/
+ }
+
+ .board img {
+  opacity: 0.8;
+ }
+
+
+
+ p {
+  font-family: 'Chalk Hand Lettering';
+  color: rgba(255, 255, 255, 1);
+  font-size: 2em;
+ }
+
+.alert {
+  margin-top: 100px;
+  text-align: center;
+}
+
+ .avatar {
+  display: block;
+  margin: 0 auto 20px auto;
+ }
+
+ .players-wrapper { 
+  margin: 30px 0 30px 0;
+  text-align: center;
+ }
+
+.players {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  display:inline-block;
+  background-color: rgba(153, 204, 255,0.7);
+  padding: 15px 15px 15px 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-color: #ccc;
+  height: 520px;
+}
+
+.player-box {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  display:inline-block;
+  background-color: rgba(153, 204, 255,0.7);
+  padding: 15px 15px 15px 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-color: #ccc;
+  width: 300px;
+}
+
+.log-in {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  display:inline-block;
+  background-color: rgba(153, 204, 255,0.7);
+  padding: 15px 15px 15px 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-color: #ccc;
+  width: 300px;
+}
+
+.edit-form {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  display:inline-block;
+  background-color: rgba(153, 204, 255,0.7);
+  padding: 15px 15px 15px 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-color: #ccc;
+}
+
+.games {
+  text-align: center;
+  margin: 0 auto 30px auto;
+  display: block;
+  background-color: rgba(153, 204, 255,0.7);
+  padding: 15px 15px 15px 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-color: #ccc;
+}
+
+.games a {
+  margin-right: 30px;
+}
+
+.players .challenge-button {
+  font-family: 'Chalk Hand Lettering';
+  color: rgba(255, 0, 0, 0.8);
+  font-size: 3em;
+}
+
+.players .edit-button {
+  font-family: 'Chalk Hand Lettering';
+  font-size: 3em;
+}
+
+.players .challenge {
+  margin-top: 10px;
+}
+
+.new-game {
+  margin: 40px;
+  text-align: center;
+}
+
+.number {
+  position: relative;
+  font-family: "Eraser Dust";
+  font-size: 1.3em;
+  top: 3px;
+}
+
+table {
+  margin-top: 0px;
+}
+
+.symbol {
+  text-align: center;
+}
+
+th td {
+  margin: 10px;
+}
+
+.leaderboard h4 {
+  margin: 10px;
+}
+
+.lb-number {
+  font-family: "Eraser Dust";
+  font-size: 1.5em;
+}
+
+.leadertable {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.players .edit {
+  margin-top: 10px;
+}
+
+.edit a {
+  color: #0082C3;
+}
+
+.finish-message {
+  text-align: center;
+}
+
+.sidebar {
+  margin-top: 25px;
+}
+
+.opponent {
+   text-align: center;
+   font-family: 'Chalk Hand Lettering';
+   color: rgba(255, 255, 255, 1);
+   font-size: 4em;
+   margin: 5px;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+.coin {
+  border-radius: 100%;
+  height: 140px;
+  width: 140px;
+  border: none;
+}
+
+.coin:hover {
+    background-color: transparent;
+    transform: rotate(20deg);
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);
+}
+
+.profile {
+  margin-top: 10px;
+  text-align: left;
+  position: relative;
+  left: 10px;
+  text-decoration: underline;
+}
+
+.desc {
+  margin-top: 10px;
+}
+
+
+/* Quantum */
+
+h1, h2, h3, h4, h5, h6, p, .board {
+  color: #228DFF;
+  font-family: Iceland;
+}
+
+body {
+  color: #228DFF;
+}
+
+.qtt {
+  background-color: black;
+}
+
+.quantum-marks {
+  font-size: 30px;
+  margin: 4px;
+  padding: 0;
+  display: inline-block;
+  background-color: rgba(0,0,0, 0.8);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  vertical-align: middle;
+  padding-top: 3px;
+  padding-left: 3px;
+}
+
+.collapsed-marks {
+  font-size: 150px;
+  color: rgba(34, 141, 255, 0.8);
+  margin: 4px;
+  margin-top: 5px;
+  padding: 0;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  height: 138px;
+  width: 138px;
+  text-align: center;
+  /*box-shadow: 0 0 5px 5px #228DFF;*/
+  vertical-align: top;
+  padding-top: 0px;
+  line-height: 138px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+}
+
+sub {
+  font-size: 20px;
+}
+
+.new-game {
+  position: absolute;
+  left: 41.4%;
+  width: 10%;
+  top: 40%;
+}
+
+.btn-lg, .collapse-select {
+  width: 140px;
+}
+
+#squares {
+  width: 220px;
+  display: inline-block;
+}
+
+#collapse {
+  display: inline-block;
+}
+
+.board {
+  padding: 2px;
+  padding-top: 4px;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.new-game-form {
+  margin-top: 120px;
+}
+
+.new-game-submit {
+  text-align: center;
+}
+
+.qtt_player2 {
+  color: #228DFF;
+}
+
+.siderbar {
+  margin-top: 80px;
+}
+
+
+/* neon */
+
+/*setup*/
+
+@font-face {
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Iceland'), local('Iceland-Regular'), url(http://themes.googleusercontent.com/static/fonts/iceland/v3/F6LYTZLHrG9BNYXRjU7RSw.woff) format('woff');
+}
+
+body {
+  background-color: #222222;
+  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+}
+
+
+/*neeeeoooon*/
+
+p {
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+#logo, .btn, .form-group {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#logo, .btn, .form-group {
+  font-size: 1.5em;
+  color: #228DFF;
+  font-family: Iceland;
+}
+
+#logo:hover, .btn:hover, .form-group:hover, h1, h2, h3 {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+#logo:hover, .btn:hover, .form-group:hover, h1, h2, h3 {
+  color: #ffffff;
+}
+
+.form-control {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.form-control {
+  color: #000000;
+  font-family: Iceland;
+  font-size: 20px;
+}
+
+.form-control:hover {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.form-control:hover {
+  color: #000000;
+}
+/*glow for webkit*/
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+/*glow*/
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    opacity: 1.0;
+  }
+  to { 
+    -webkit-transform: scale(1.0);
+    opacity: 0.75;
+  }
+}
+
+.pulse { 
+  opacity: 0.75; 
+  -webkit-animation-name: pulse; 
+  -webkit-animation-duration: 1s; 
+  -webkit-animation-iteration-count: infinite; 
+}
+
+
+
+
+
+
+
+
+

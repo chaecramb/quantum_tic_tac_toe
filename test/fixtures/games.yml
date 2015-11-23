@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  board: MyText
+  player1_id: 1
+  player2_id: 1
+  current_player_id: 1
+  winner_id: 1
+  is_draw: false
+
+two:
+  board: MyText
+  player1_id: 1
+  player2_id: 1
+  current_player_id: 1
+  winner_id: 1
+  is_draw: false

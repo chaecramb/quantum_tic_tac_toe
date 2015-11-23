@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GamingPortal</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="qtt">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a id="logo" class="navbar-brand text-muted" href="/">IT'S QUANTUM BABY!</a>
+<!--     <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li><%#= link_to "QTT", "/" %></li>
+      </ul> 
+    </div> -->
+  </div>  
+</nav>
+
+<main class='container'>
+  <section class='row'>
+  <div class="col-md-12">
+
+<% if alert %>
+<div class="alert alert-warning">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <p class="alert-warning"><%= alert %></p>
+</div> 
+<% end %>
+
+  </div>
+  </section>
+
+
+<%= yield %>
+
+</main>
+
+</body>
+</html>
