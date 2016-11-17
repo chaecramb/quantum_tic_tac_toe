@@ -1,28 +1,5 @@
-== README
+# Quantum Tic-Tac-Toe
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An implementation of [Quantum Tic-Tac-Toe](https://en.wikipedia.org/wiki/Quantum_tic-tac-toe) writen in 2 days as an extension of my project at CodeClan. I was pleased with the result, as it was a fairly ambitous for the time frame and stage of the course, but as result but having been written in such a short space of time it's in need of some refactoring (I'm tempted to re-write in Python).
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+My initial Tic-Tac-Toe app had multiple AI "personalities". The algorithm I used for it [minimax](https://en.wikipedia.org/wiki/Minimax) won't work efficiently for QTTT however due having significantly more permutations of the game board. A QTTT AI is on the to-do list as it would involve some interesting data structure and algorithm problems.
